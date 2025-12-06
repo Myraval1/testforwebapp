@@ -25,17 +25,17 @@ export const Contact: React.FC = () => {
           
           {/* Contact Info */}
           <div>
-            <h2 className="text-4xl font-heading font-bold text-white uppercase mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-white uppercase mb-6 sm:mb-8">
               ¿Listo para empezar? <span className="text-titan-gold">Contáctanos</span>
             </h2>
-            <p className="text-gray-400 mb-10 text-lg">
+            <p className="text-gray-400 mb-8 sm:mb-10 text-sm sm:text-base md:text-lg">
               Ven a conocer nuestras instalaciones. La primera visita corre por nuestra cuenta. Estacionamiento privado disponible.
             </p>
 
-            <div className="space-y-8">
-              <div className="flex items-start">
-                <div className="bg-titan-dark p-3 rounded-sm mr-4 text-titan-gold border border-zinc-800">
-                  <MapPin size={24} />
+            <div className="space-y-6 sm:space-y-8">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="bg-titan-dark p-2 sm:p-3 rounded-sm text-titan-gold border border-zinc-800 flex-shrink-0">
+                  <MapPin size={20} className="sm:w-6 sm:h-6" />
                 </div>
                 <div>
                   <h4 className="text-white font-bold uppercase mb-1">Dirección</h4>
