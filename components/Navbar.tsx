@@ -66,7 +66,7 @@ export const Navbar: React.FC = () => {
                 {item.label}
               </a>
             ))}
-            <Button variant="primary" className="py-2 px-4 text-sm" onClick={openWhatsApp}>
+            <Button variant="primary" className="py-2 px-3 sm:px-4 text-xs sm:text-sm" onClick={openWhatsApp}>
               Matrícula Gratis
             </Button>
           </div>
