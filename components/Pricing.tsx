@@ -51,14 +51,14 @@ export const Pricing: React.FC = () => {
   };
 
   return (
-    <section id="plans" className="py-24 bg-titan-dark">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-white font-heading font-bold text-4xl uppercase mb-4">Elige tu Desafío</h2>
-          <p className="text-gray-400 text-lg">Sin letras chicas. Sin matrículas ocultas. Solo entrenamiento.</p>
+    <section id="plans" className="py-16 sm:py-24 bg-titan-dark">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-white font-heading font-bold text-2xl sm:text-3xl md:text-4xl uppercase mb-3 sm:mb-4">Elige tu Desafío</h2>
+          <p className="text-gray-400 text-sm sm:text-base md:text-lg">Sin letras chicas. Sin matrículas ocultas. Solo entrenamiento.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {plans.map((plan, index) => (
             <div 
               key={index} 
