@@ -49,9 +49,9 @@ export const Hero: React.FC = () => {
             </Button>
           </div>
           
-          <div className="mt-12 flex items-center gap-8 text-sm text-gray-400 font-medium">
+          <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 text-xs sm:text-sm text-gray-400 font-medium">
              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-green-500"></span>
+                <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0"></span>
                 <span>Abierto Hoy hasta las 23:00</span>
              </div>
              <div className="hidden sm:block">|</div>
