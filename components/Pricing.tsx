@@ -60,12 +60,12 @@ export const Pricing: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {plans.map((plan, index) => (
-            <div 
-              key={index} 
-              className={`relative flex flex-col p-8 rounded-sm transition-all duration-300 ${plan.recommended ? 'bg-zinc-800 border-2 border-titan-gold transform md:-translate-y-4 shadow-2xl' : 'bg-zinc-900 border border-zinc-700'}`}
+            <div
+              key={index}
+              className={`relative flex flex-col p-6 sm:p-8 rounded-sm transition-all duration-300 ${plan.recommended ? 'bg-zinc-800 border-2 border-titan-gold transform md:-translate-y-4 shadow-2xl' : 'bg-zinc-900 border border-zinc-700'}`}
             >
               {plan.recommended && (
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-titan-gold text-black px-4 py-1 font-bold uppercase text-sm tracking-wider rounded-sm">
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-titan-gold text-black px-3 sm:px-4 py-1 font-bold uppercase text-xs sm:text-sm tracking-wider rounded-sm">
                   Más Popular
                 </div>
               )}
