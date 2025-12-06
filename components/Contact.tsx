@@ -37,17 +37,17 @@ export const Contact: React.FC = () => {
                 <div className="bg-titan-dark p-2 sm:p-3 rounded-sm text-titan-gold border border-zinc-800 flex-shrink-0">
                   <MapPin size={20} className="sm:w-6 sm:h-6" />
                 </div>
-                <div>
-                  <h4 className="text-white font-bold uppercase mb-1">Dirección</h4>
-                  <p className="text-gray-400">Rinconada de Malambo 1670-B</p>
-                  <p className="text-gray-500 text-sm">Rengo, O'Higgins, Chile</p>
-                  <a href="https://maps.google.com/?q=Titans+House+Rengo" target="_blank" rel="noreferrer" className="text-titan-gold text-sm underline mt-1 block hover:text-white">Ver en Google Maps</a>
+                <div className="min-w-0">
+                  <h4 className="text-white font-bold uppercase mb-1 text-sm sm:text-base">Dirección</h4>
+                  <p className="text-gray-400 text-sm sm:text-base">Rinconada de Malambo 1670-B</p>
+                  <p className="text-gray-500 text-xs sm:text-sm">Rengo, O'Higgins, Chile</p>
+                  <a href="https://maps.google.com/?q=Titans+House+Rengo" target="_blank" rel="noreferrer" className="text-titan-gold text-xs sm:text-sm underline mt-1 block hover:text-white">Ver en Google Maps</a>
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="bg-titan-dark p-3 rounded-sm mr-4 text-titan-gold border border-zinc-800">
-                  <Clock size={24} />
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="bg-titan-dark p-2 sm:p-3 rounded-sm text-titan-gold border border-zinc-800 flex-shrink-0">
+                  <Clock size={20} className="sm:w-6 sm:h-6" />
                 </div>
                 <div>
                   <h4 className="text-white font-bold uppercase mb-1">Horarios</h4>
