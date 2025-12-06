@@ -82,30 +82,30 @@ export const Contact: React.FC = () => {
             <h3 className="text-lg sm:text-2xl font-bold text-white mb-4 sm:mb-6 uppercase">Solicita Información</h3>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
               <div>
-                <label className="block text-sm font-medium text-gray-400 mb-2">Nombre Completo</label>
-                <input 
+                <label className="block text-xs sm:text-sm font-medium text-gray-400 mb-2">Nombre Completo</label>
+                <input
                   {...register("name", { required: true })}
-                  className="w-full bg-black border border-zinc-700 text-white px-4 py-3 rounded-sm focus:outline-none focus:border-titan-gold focus:ring-1 focus:ring-titan-gold transition"
+                  className="w-full bg-black border border-zinc-700 text-white px-3 sm:px-4 py-2 sm:py-3 rounded-sm text-sm focus:outline-none focus:border-titan-gold focus:ring-1 focus:ring-titan-gold transition"
                   placeholder="Tu nombre de guerrero"
                 />
                 {errors.name && <span className="text-titan-red text-xs">Este campo es requerido</span>}
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-400 mb-2">Teléfono / WhatsApp</label>
-                <input 
+                <label className="block text-xs sm:text-sm font-medium text-gray-400 mb-2">Teléfono / WhatsApp</label>
+                <input
                   {...register("phone", { required: true })}
-                  className="w-full bg-black border border-zinc-700 text-white px-4 py-3 rounded-sm focus:outline-none focus:border-titan-gold focus:ring-1 focus:ring-titan-gold transition"
+                  className="w-full bg-black border border-zinc-700 text-white px-3 sm:px-4 py-2 sm:py-3 rounded-sm text-sm focus:outline-none focus:border-titan-gold focus:ring-1 focus:ring-titan-gold transition"
                   placeholder="+56 9 ..."
                 />
                 {errors.phone && <span className="text-titan-red text-xs">Este campo es requerido</span>}
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-400 mb-2">Objetivo Principal</label>
-                <select 
+                <label className="block text-xs sm:text-sm font-medium text-gray-400 mb-2">Objetivo Principal</label>
+                <select
                   {...register("goal")}
-                  className="w-full bg-black border border-zinc-700 text-white px-4 py-3 rounded-sm focus:outline-none focus:border-titan-gold focus:ring-1 focus:ring-titan-gold transition"
+                  className="w-full bg-black border border-zinc-700 text-white px-3 sm:px-4 py-2 sm:py-3 rounded-sm text-sm focus:outline-none focus:border-titan-gold focus:ring-1 focus:ring-titan-gold transition"
                 >
                   <option value="Perder Peso">Perder Peso</option>
                   <option value="Ganar Músculo">Ganar Músculo</option>
