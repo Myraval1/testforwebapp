@@ -64,12 +64,12 @@ export const Contact: React.FC = () => {
                 <div className="bg-titan-dark p-2 sm:p-3 rounded-sm text-titan-gold border border-zinc-800 flex-shrink-0">
                   <Phone size={20} className="sm:w-6 sm:h-6" />
                 </div>
-                <div>
-                  <h4 className="text-white font-bold uppercase mb-1">Contacto</h4>
-                  <p className="text-gray-400">+56 9 6216 9412</p>
-                  <div className="flex gap-4 mt-2">
+                <div className="min-w-0">
+                  <h4 className="text-white font-bold uppercase mb-1 text-sm sm:text-base">Contacto</h4>
+                  <p className="text-gray-400 text-sm sm:text-base">+56 9 6216 9412</p>
+                  <div className="flex gap-3 sm:gap-4 mt-2">
                     <a href="https://www.instagram.com/titans_house_" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-titan-gold transition">
-                      <Instagram />
+                      <Instagram size={20} className="sm:w-6 sm:h-6" />
                     </a>
                   </div>
                 </div>
@@ -78,9 +78,9 @@ export const Contact: React.FC = () => {
           </div>
 
           {/* Form */}
-          <div className="bg-zinc-900 p-8 rounded-sm shadow-2xl border-t-4 border-titan-red">
-            <h3 className="text-2xl font-bold text-white mb-6 uppercase">Solicita Información</h3>
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          <div className="bg-zinc-900 p-6 sm:p-8 rounded-sm shadow-2xl border-t-4 border-titan-red">
+            <h3 className="text-lg sm:text-2xl font-bold text-white mb-4 sm:mb-6 uppercase">Solicita Información</h3>
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-400 mb-2">Nombre Completo</label>
                 <input 
