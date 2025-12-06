@@ -28,14 +28,14 @@ export const Hero: React.FC = () => {
             <span className="text-titan-gold text-sm font-medium tracking-wide uppercase">Ubicados en Rengo, Chile</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-heading font-bold text-white mb-6 leading-tight uppercase">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight uppercase">
             Transforma tu cuerpo <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-titan-gold to-yellow-200">
               Libera tu Titán
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 font-light max-w-2xl">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 font-light max-w-2xl">
             Únete a la Familia Titans. Entrena sin límites, sin contratos forzosos y con matrícula <span className="text-titan-gold font-bold">TOTALMENTE GRATIS</span>.
           </p>
 
