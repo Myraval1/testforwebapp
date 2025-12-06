@@ -70,21 +70,21 @@ export const Pricing: React.FC = () => {
                 </div>
               )}
               
-              <div className="mb-6">
-                <h3 className="text-2xl font-heading font-bold text-white uppercase mb-2">{plan.name}</h3>
+              <div className="mb-4 sm:mb-6">
+                <h3 className="text-lg sm:text-2xl font-heading font-bold text-white uppercase mb-2">{plan.name}</h3>
                 <div className="flex items-baseline">
-                  <span className="text-4xl font-bold text-titan-gold">{plan.price}</span>
-                  <span className="text-gray-400 ml-2">{plan.period}</span>
+                  <span className="text-3xl sm:text-4xl font-bold text-titan-gold">{plan.price}</span>
+                  <span className="text-gray-400 ml-2 text-sm sm:text-base">{plan.period}</span>
                 </div>
-                <div className="mt-4 text-green-400 font-bold text-sm uppercase flex items-center">
+                <div className="mt-3 sm:mt-4 text-green-400 font-bold text-xs sm:text-sm uppercase flex items-center">
                   <Check className="h-4 w-4 mr-1" /> Matrícula GRATIS
                 </div>
               </div>
 
-              <ul className="flex-1 space-y-4 mb-8">
+              <ul className="flex-1 space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 {plan.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start text-gray-300 text-sm">
-                    <Check className="h-5 w-5 text-titan-gold mr-3 flex-shrink-0" />
+                  <li key={idx} className="flex items-start text-gray-300 text-xs sm:text-sm">
+                    <Check className="h-4 sm:h-5 w-4 sm:w-5 text-titan-gold mr-2 sm:mr-3 flex-shrink-0 mt-0.5" />
                     {feature}
                   </li>
                 ))}
