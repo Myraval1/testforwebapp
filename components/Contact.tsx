@@ -49,20 +49,20 @@ export const Contact: React.FC = () => {
                 <div className="bg-titan-dark p-2 sm:p-3 rounded-sm text-titan-gold border border-zinc-800 flex-shrink-0">
                   <Clock size={20} className="sm:w-6 sm:h-6" />
                 </div>
-                <div>
-                  <h4 className="text-white font-bold uppercase mb-1">Horarios</h4>
-                  <div className="text-gray-400 space-y-1">
-                    <p className="flex justify-between w-48"><span>Lun - Vie:</span> <span className="text-white">08:00 - 23:00</span></p>
-                    <p className="flex justify-between w-48"><span>Sábado:</span> <span className="text-white">09:00 - 14:00</span></p>
-                    <p className="flex justify-between w-48"><span>Domingo:</span> <span className="text-white">10:00 - 14:00</span></p>
-                    <p className="flex justify-between w-48"><span>Festivos:</span> <span className="text-white">09:00 - 14:00</span></p>
+                <div className="min-w-0">
+                  <h4 className="text-white font-bold uppercase mb-1 text-sm sm:text-base">Horarios</h4>
+                  <div className="text-gray-400 space-y-1 text-xs sm:text-sm">
+                    <p className="flex justify-between"><span>Lun - Vie:</span> <span className="text-white ml-2">08:00 - 23:00</span></p>
+                    <p className="flex justify-between"><span>Sábado:</span> <span className="text-white ml-2">09:00 - 14:00</span></p>
+                    <p className="flex justify-between"><span>Domingo:</span> <span className="text-white ml-2">10:00 - 14:00</span></p>
+                    <p className="flex justify-between"><span>Festivos:</span> <span className="text-white ml-2">09:00 - 14:00</span></p>
                   </div>
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="bg-titan-dark p-3 rounded-sm mr-4 text-titan-gold border border-zinc-800">
-                  <Phone size={24} />
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="bg-titan-dark p-2 sm:p-3 rounded-sm text-titan-gold border border-zinc-800 flex-shrink-0">
+                  <Phone size={20} className="sm:w-6 sm:h-6" />
                 </div>
                 <div>
                   <h4 className="text-white font-bold uppercase mb-1">Contacto</h4>
