@@ -25,14 +25,14 @@ export const Features: React.FC = () => {
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 relative z-10 -mt-0 sm:-mt-32">
           {features.map((feature, index) => (
-            <div 
-              key={index} 
-              className="bg-zinc-900 border-b-4 border-titan-gold p-8 rounded-sm shadow-xl hover:transform hover:-translate-y-2 transition-all duration-300"
+            <div
+              key={index}
+              className="bg-zinc-900 border-b-4 border-titan-gold p-6 sm:p-8 rounded-sm shadow-xl hover:transform hover:-translate-y-2 transition-all duration-300"
             >
-              <div className="bg-zinc-800 w-20 h-20 rounded-full flex items-center justify-center mb-6">
-                {feature.icon}
+              <div className="bg-zinc-800 w-16 sm:w-20 h-16 sm:h-20 rounded-full flex items-center justify-center mb-4 sm:mb-6">
+                <span className="scale-75 sm:scale-100 origin-center">{feature.icon}</span>
               </div>
-              <h3 className="text-2xl font-heading font-bold text-white mb-4 uppercase">{feature.title}</h3>
+              <h3 className="text-xl sm:text-2xl font-heading font-bold text-white mb-3 sm:mb-4 uppercase">{feature.title}</h3>
               <p className="text-gray-400 leading-relaxed">
                 {feature.description}
               </p>
