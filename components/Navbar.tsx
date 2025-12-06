@@ -85,7 +85,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       <div className={`md:hidden absolute w-full bg-black/95 backdrop-blur-md border-b border-gray-800 transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
-        <div className="px-4 pt-2 pb-6 space-y-2 text-center">
+        <div className="px-3 sm:px-4 pt-2 pb-6 space-y-2 text-center">
           {navItems.map((item) => (
             <a
               key={item.label}
