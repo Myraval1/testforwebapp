@@ -23,12 +23,12 @@ export const Hero: React.FC = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 w-full pt-16 sm:pt-20">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 bg-titan-gold/20 border border-titan-gold/30 rounded-full px-4 py-1 mb-6 backdrop-blur-sm animate-fade-in-up">
-            <MapPin className="h-4 w-4 text-titan-gold" />
-            <span className="text-titan-gold text-sm font-medium tracking-wide uppercase">Ubicados en Rengo, Chile</span>
+          <div className="inline-flex items-center gap-2 bg-titan-gold/20 border border-titan-gold/30 rounded-full px-3 sm:px-4 py-1 mb-4 sm:mb-6 backdrop-blur-sm animate-fade-in-up">
+            <MapPin className="h-3 sm:h-4 w-3 sm:w-4 text-titan-gold flex-shrink-0" />
+            <span className="text-titan-gold text-xs sm:text-sm font-medium tracking-wide uppercase">Ubicados en Rengo, Chile</span>
           </div>
-          
-          <h1 className="text-5xl md:text-7xl font-heading font-bold text-white mb-6 leading-tight uppercase">
+
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-white mb-4 sm:mb-6 leading-tight uppercase">
             Transforma tu cuerpo <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-titan-gold to-yellow-200">
               Libera tu Titán
