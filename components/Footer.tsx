@@ -4,7 +4,7 @@ import { Dumbbell, Instagram, Facebook } from 'lucide-react';
 export const Footer: React.FC = () => {
   return (
     <footer className="bg-zinc-950 border-t border-zinc-900 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
         
         <div className="flex items-center mb-6 md:mb-0">
           <div className="bg-titan-gold p-2 rounded-full mr-3">
