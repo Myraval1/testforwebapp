@@ -54,15 +54,15 @@ export const Pricing: React.FC = () => {
     <section id="plans" className="py-24 bg-titan-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-white font-heading font-bold text-4xl uppercase mb-4">Elige tu Desafío</h2>
-          <p className="text-gray-400 text-lg">Sin letras chicas. Sin matrículas ocultas. Solo entrenamiento.</p>
+          <h2 className="text-white font-heading font-bold text-3xl sm:text-4xl uppercase mb-4">Elige tu Desafío</h2>
+          <p className="text-gray-400 text-base sm:text-lg">Sin letras chicas. Sin matrículas ocultas. Solo entrenamiento.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
-            <div 
-              key={index} 
-              className={`relative flex flex-col p-8 rounded-sm transition-all duration-300 ${plan.recommended ? 'bg-zinc-800 border-2 border-titan-gold transform md:-translate-y-4 shadow-2xl' : 'bg-zinc-900 border border-zinc-700'}`}
+            <div
+              key={index}
+              className={`relative flex flex-col p-6 sm:p-8 rounded-sm transition-all duration-300 ${plan.recommended ? 'bg-zinc-800 border-2 border-titan-gold transform md:-translate-y-4 shadow-2xl' : 'bg-zinc-900 border border-zinc-700'}`}
             >
               {plan.recommended && (
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-titan-gold text-black px-4 py-1 font-bold uppercase text-sm tracking-wider rounded-sm">
@@ -71,7 +71,7 @@ export const Pricing: React.FC = () => {
               )}
               
               <div className="mb-6">
-                <h3 className="text-2xl font-heading font-bold text-white uppercase mb-2">{plan.name}</h3>
+                <h3 className="text-xl sm:text-2xl font-heading font-bold text-white uppercase mb-2">{plan.name}</h3>
                 <div className="flex items-baseline">
                   <span className="text-4xl font-bold text-titan-gold">{plan.price}</span>
                   <span className="text-gray-400 ml-2">{plan.period}</span>

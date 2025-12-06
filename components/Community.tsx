@@ -27,10 +27,10 @@ export const Community: React.FC = () => {
   return (
     <section id="community" className="py-24 bg-zinc-950 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row gap-12 items-center mb-20">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-center mb-20">
           <div className="w-full md:w-1/2">
-            <h2 className="text-titan-gold font-heading font-bold text-xl tracking-widest uppercase mb-2">Comunidad Titans</h2>
-            <h3 className="text-4xl md:text-5xl font-heading font-bold text-white uppercase mb-6">
+            <h2 className="text-titan-gold font-heading font-bold text-sm sm:text-xl tracking-widest uppercase mb-2">Comunidad Titans</h2>
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-white uppercase mb-6">
               Entrena con tu <br/><span className="text-titan-red">Segunda Familia</span>
             </h3>
             <p className="text-gray-400 text-lg leading-relaxed mb-8">
@@ -43,8 +43,8 @@ export const Community: React.FC = () => {
             </div>
           </div>
           
-          <div className="w-full md:w-1/2 bg-zinc-900 p-8 rounded-sm border-l-4 border-titan-gold">
-            <h4 className="text-2xl font-bold text-white mb-6 uppercase">Lo que dicen los Titanes</h4>
+          <div className="w-full md:w-1/2 bg-zinc-900 p-6 sm:p-8 rounded-sm border-l-4 border-titan-gold">
+            <h4 className="text-xl sm:text-2xl font-bold text-white mb-6 uppercase">Lo que dicen los Titanes</h4>
             <div className="space-y-6">
               {testimonials.map((t, idx) => (
                 <div key={idx} className="flex gap-4 border-b border-gray-800 pb-4 last:border-0 last:pb-0">
