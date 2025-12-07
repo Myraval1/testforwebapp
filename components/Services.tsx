@@ -1,6 +1,14 @@
 import React from 'react';
 import { Dumbbell, Activity, Users, Zap } from 'lucide-react';
 
+// Configuration for Service Images - Update URLs here
+const SERVICE_IMAGES = {
+  musculacion: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=2070&auto=format&fit=crop",
+  recovery: "https://images.unsplash.com/photo-1544367563-12123d896889?q=80&w=2070&auto=format&fit=crop",
+  comunidad: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1975&auto=format&fit=crop",
+  beneficios: "https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=1974&auto=format&fit=crop"
+};
+
 export const Services: React.FC = () => {
   return (
     <section id="services" className="py-24 bg-black">
@@ -15,9 +23,9 @@ export const Services: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="group relative overflow-hidden rounded-lg h-80">
             <img 
-              src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=2070&auto=format&fit=crop" 
+              src={SERVICE_IMAGES.musculacion}
               alt="Entrenamiento de musculación en Gimnasio Titans House Rengo" 
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-90"></div>
             <div className="absolute bottom-0 left-0 p-6">
@@ -29,9 +37,9 @@ export const Services: React.FC = () => {
 
           <div className="group relative overflow-hidden rounded-lg h-80">
             <img 
-              src="https://images.unsplash.com/photo-1544367563-12123d896889?q=80&w=2070&auto=format&fit=crop" 
+              src={SERVICE_IMAGES.recovery}
               alt="Servicio de Masoterapia y Recovery muscular en Rengo" 
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-90"></div>
             <div className="absolute bottom-0 left-0 p-6">
@@ -43,9 +51,9 @@ export const Services: React.FC = () => {
 
           <div className="group relative overflow-hidden rounded-lg h-80">
             <img 
-              src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1975&auto=format&fit=crop" 
+              src={SERVICE_IMAGES.comunidad}
               alt="Comunidad fitness Gym Titans House, gimnasio sin contratos" 
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-90"></div>
             <div className="absolute bottom-0 left-0 p-6">
@@ -57,9 +65,9 @@ export const Services: React.FC = () => {
 
           <div className="group relative overflow-hidden rounded-lg h-80">
             <img 
-              src="https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=1974&auto=format&fit=crop" 
+              src={SERVICE_IMAGES.beneficios}
               alt="Beneficios y descuentos en gimnasio económico Rengo" 
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-90"></div>
             <div className="absolute bottom-0 left-0 p-6">

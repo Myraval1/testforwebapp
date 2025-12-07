@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
           <a href="https://www.instagram.com/titans_house_" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-titan-gold transition-colors">
             <Instagram size={24} />
           </a>
-          <a href="#" className="text-gray-400 hover:text-titan-gold transition-colors">
+          <a href="https://www.facebook.com/people/Titans-house/61579827960944/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-titan-gold transition-colors">
             <Facebook size={24} />
           </a>
         </div>
