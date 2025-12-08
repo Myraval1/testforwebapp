@@ -1,26 +1,44 @@
 import React from 'react';
 import { Dumbbell, Activity, Users, Zap } from 'lucide-react';
+import { Button } from './Button';
+import { useNavigate } from 'react-router-dom';
 
-// Configuration for Service Images - Update URLs here
+// --- EASY EDIT: REPLACE IMAGE LINKS BELOW ---
+// Instructions: Paste your image address (URL) inside the quotes.
 const SERVICE_IMAGES = {
+  // Image for "Musculación" card
   musculacion: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=2070&auto=format&fit=crop",
+  
+  // Image for "Recovery" card
   recovery: "https://images.unsplash.com/photo-1544367563-12123d896889?q=80&w=2070&auto=format&fit=crop",
+  
+  // Image for "Comunidad" card
   comunidad: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1975&auto=format&fit=crop",
+  
+  // Image for "Beneficios" card
   beneficios: "https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=1974&auto=format&fit=crop"
 };
 
+const SERVICES_LAYOUT = {
+  padding: "py-24 md:py-32 lg:py-40",
+  titleSize: "text-4xl md:text-5xl",
+  gridGap: "gap-6 md:gap-8 lg:gap-10"
+};
+
 export const Services: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
-    <section id="services" className="py-24 bg-black">
+    <section id="services" className={`${SERVICES_LAYOUT.padding} bg-black`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-titan-gold font-heading font-bold text-xl tracking-widest uppercase mb-2">Lo que ofrecemos</h2>
-          <h3 className="text-4xl md:text-5xl font-heading font-bold text-white uppercase">
+          <h3 className={`${SERVICES_LAYOUT.titleSize} font-heading font-bold text-white uppercase`}>
             Mucho más que <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800">Pesas</span>
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ${SERVICES_LAYOUT.gridGap} mb-16`}>
           <div className="group relative overflow-hidden rounded-lg h-80">
             <img 
               src={SERVICE_IMAGES.musculacion}
@@ -76,6 +94,17 @@ export const Services: React.FC = () => {
               <p className="text-sm text-gray-300">Descuentos exclusivos con nuestros partners locales.</p>
             </div>
           </div>
+        </div>
+
+        {/* Call to Action for Gallery */}
+        <div className="flex justify-center">
+            <Button 
+                variant="outline" 
+                onClick={() => navigate('/gimnasio')}
+                className="px-8 py-3 tracking-widest text-lg"
+            >
+                VER GIMNASIO
+            </Button>
         </div>
       </div>
     </section>

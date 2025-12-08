@@ -9,11 +9,14 @@ const HERO_STYLE_GUIDE = {
   // pt-20 = Mobile Padding
   // md:pt-32 = Tablet Padding
   // lg:pt-32 = Desktop Padding
-  paddingTop: "pt-24 md:pt-24 lg:pt-24",
+  paddingTop: "pt-24 md:pt-32 lg:pt-32",
+  paddingBottom: "pb-40 md:pb-32",
   titleSize: "text-5xl md:text-7xl",
   subtitleSize: "text-xl md:text-2xl",
   buttonSpacing: "gap-4",
-  footerSpacing: "mt-12 flex flex-col items-start gap-2 md:gap-6 text-sm text-gray-400 font-medium w-full"
+  // Updated: flex-col for mobile, md:flex-row for tablet/desktop
+  // mt-8 for mobile (compact), mt-12 for desktop
+  footerSpacing: "mt-8 md:mt-12 flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-6 text-sm text-gray-400 font-medium w-full"
 };
 
 // Asset Constants
@@ -61,20 +64,19 @@ export const Hero: React.FC = () => {
           throw new Error("Failed to fetch holidays");
         }
       } catch (error) {
-        console.warn("Error fetching holidays API, using fallback data for 2025.", error);
-        
-        const fallbackHolidays2025 = [
-          "2025-01-01", "2025-04-18", "2025-04-19", "2025-05-01", 
-          "2025-05-21", "2025-06-20", "2025-06-29", "2025-07-16", 
-          "2025-08-15", "2025-09-18", "2025-09-19", "2025-10-12", 
-          "2025-10-31", "2025-11-01", "2025-12-08", "2025-12-25"
+        // Fallback for 2025 fixed holidays if API fails
+        const fixedHolidays2025 = [
+            "2025-01-01", "2025-04-18", "2025-04-19", "2025-05-01", 
+            "2025-05-21", "2025-06-20", "2025-06-29", "2025-07-16", 
+            "2025-08-15", "2025-09-18", "2025-09-19", "2025-10-12", 
+            "2025-10-31", "2025-11-01", "2025-12-08", "2025-12-25"
         ];
-        
-        if (year === 2025 && fallbackHolidays2025.includes(todayString)) {
-          isHoliday = true;
+        if (fixedHolidays2025.includes(todayString)) {
+            isHoliday = true;
         }
       }
 
+      // 3. Override closing time if it is a holiday
       if (isHoliday) {
         setHoursText(`Abierto Hoy hasta las 14:00`);
       }
@@ -83,102 +85,98 @@ export const Hero: React.FC = () => {
     calculateHours();
   }, []);
 
-  const openWhatsAppFreeTrial = () => {
-    const message = "Hola! Quiero mi prueba gratuita en Titans House.";
-    window.open(`https://wa.me/56962169412?text=${encodeURIComponent(message)}`, '_blank');
-  };
-
-  const handleViewPlans = () => {
-    navigate('/planes');
-  };
-
   return (
-    <section id="home" className="relative min-h-[85vh] md:min-h-screen flex items-center justify-center overflow-hidden bg-zinc-900 pb-32 md:pb-12">
+    <section id="home" className="relative min-h-[85vh] flex items-center bg-black overflow-hidden">
       
-      {/* 1. Mobile Asset (Video) */}
+      {/* Mobile Video Background */}
       <div className="absolute inset-0 z-0 block md:hidden">
-        <video 
-          autoPlay 
-          loop 
-          muted 
+        <video
+          autoPlay
+          loop
+          muted
           playsInline
           className="w-full h-full object-cover"
         >
           <source src={MOBILE_ASSET_URL} type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
+        {/* Stronger overlay for mobile video readability */}
+        <div className="absolute inset-0 bg-black/60 bg-gradient-to-t from-black via-black/40 to-black/70"></div>
       </div>
 
-      {/* 2. Desktop/Tablet Asset (Image) */}
+      {/* Desktop/Tablet Image Background */}
       <div className="absolute inset-0 z-0 hidden md:block">
-        <img
-          src={DESKTOP_ASSET_URL}
-          alt="Gimnasio Titans House en Rengo Chile - Entrenamiento funcional y pesas"
+        <img 
+          src={DESKTOP_ASSET_URL} 
+          alt="Gimnasio Titans House en Rengo Chile - Entrenamiento funcional y pesas" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+        {/* Standard overlay for desktop */}
+        <div className="absolute inset-0 bg-black/70 bg-gradient-to-r from-black via-black/60 to-transparent"></div>
       </div>
 
-      {/* --- CONTENT --- */}
-      <div className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full ${HERO_STYLE_GUIDE.paddingTop}`}>
+      <div className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center h-full w-full ${HERO_STYLE_GUIDE.paddingTop} ${HERO_STYLE_GUIDE.paddingBottom}`}>
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 bg-titan-gold/20 border border-titan-gold/30 rounded-full px-4 py-1 mb-6 backdrop-blur-sm animate-fade-in-up">
-            <MapPin className="h-4 w-4 text-titan-gold" />
-            <span className="text-titan-gold text-sm font-medium tracking-wide uppercase">Ubicados en Rengo, Chile</span>
+          
+          <div className="inline-flex items-center gap-2 bg-titan-gold/10 border border-titan-gold/30 rounded-full px-4 py-1.5 mb-4 md:mb-6 backdrop-blur-sm">
+            <MapPin size={14} className="text-titan-gold" />
+            <span className="text-titan-gold text-xs font-bold tracking-widest uppercase">Ubicados en Rengo, Chile</span>
           </div>
           
-          <h1 className={`${HERO_STYLE_GUIDE.titleSize} font-heading font-bold text-white mb-6 leading-tight uppercase`}>
-            Titans House | <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-titan-gold to-yellow-200">
-               Prueba 1 Día Gratis
-            </span>
+          <h1 className={`${HERO_STYLE_GUIDE.titleSize} font-heading font-bold text-white uppercase leading-tight mb-2 md:mb-6`}>
+            TITANS HOUSE | <br/>
+            <span className="text-titan-gold">PRUEBA 1 DÍA GRATIS</span>
           </h1>
           
-          <p className={`${HERO_STYLE_GUIDE.subtitleSize} text-gray-300 mb-8 font-light max-w-2xl`}>
-            Tu <strong>gimnasio en Rengo</strong> sin contratos forzosos. Disfruta de <strong>entrenamiento asistido</strong> o libre, con matrícula GRATIS y un ambiente que te impulsa a dar más.
+          <p className={`${HERO_STYLE_GUIDE.subtitleSize} text-gray-200 mb-6 md:mb-8 font-light max-w-2xl leading-relaxed`}>
+            Tu <strong className="text-white">gimnasio en Rengo</strong> sin contratos forzosos. Disfruta de <strong className="text-white">entrenamiento asistido</strong> o libre, con matrícula GRATIS y un ambiente que te impulsa a dar más.
           </p>
-
-          <div className={`flex flex-col sm:flex-row ${HERO_STYLE_GUIDE.buttonSpacing}`}>
-            <Button onClick={openWhatsAppFreeTrial} className="group flex items-center justify-center gap-2">
-              PRUEBA GRATUITA
-              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          
+          <div className={`flex flex-col sm:flex-row ${HERO_STYLE_GUIDE.buttonSpacing} mb-6 md:mb-0`}>
+            <Button 
+                onClick={() => window.open(`https://wa.me/56962169412?text=${encodeURIComponent("Hola! Quiero mi prueba gratuita en Titans House.")}`, '_blank')}
+                className="text-lg px-8 py-4 flex items-center justify-center group"
+            >
+              PRUEBA GRATUITA <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" onClick={handleViewPlans}>
+            <Button 
+                variant="outline" 
+                className="text-lg px-8 py-4 text-center"
+                onClick={() => navigate('/planes')}
+            >
               VER PLANES
             </Button>
           </div>
-          
+
           {/* Info Footer - Stacked on Mobile, Row on Desktop */}
           <div className={HERO_STYLE_GUIDE.footerSpacing}>
-             
-             {/* 1. Hours */}
-             <div className="flex items-center gap-3">
-                <div className="w-5 flex justify-center flex-shrink-0">
-                    <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                </div>
-                <span>{hoursText}</span>
-             </div>
-             
-             {/* 2. Address */}
-             <div className="flex items-center gap-3">
-                 <div className="w-5 flex justify-center flex-shrink-0">
-                    <MapPin className="h-4 w-4 text-gray-500" />
-                 </div>
-                 <span>Rinconada de Malambo 1670-B</span>
-             </div>
-             
-             {/* 3. Parking */}
-             <div className="flex items-center gap-3 text-titan-gold font-bold">
-                <div className="w-5 flex justify-center flex-shrink-0">
-                    <Car className="h-4 w-4" />
-                </div>
-                <span>Estacionamiento Privado Gratuito</span>
-             </div>
+            <div className="flex items-center gap-2">
+              <div className="w-5 flex justify-center md:w-auto">
+                 <div className={`w-2 h-2 rounded-full ${hoursText.includes("23:00") || hoursText.includes("14:00") ? "bg-green-500" : "bg-red-500"} animate-pulse`}></div>
+              </div>
+              <span>{hoursText}</span>
+            </div>
+            
+            <span className="hidden md:block text-zinc-600">|</span>
+            
+            <div className="flex items-center gap-2">
+               {/* Mobile-only MapPin to align visually in the stack */}
+               <div className="md:hidden w-5 flex justify-center">
+                  <MapPin size={16} className="text-titan-gold" />
+               </div>
+               <span>Rinconada de Malambo 1670-B</span>
+            </div>
 
+            <span className="hidden md:block text-zinc-600">|</span>
+
+            {/* Parking - Mobile: Stacked below. Desktop: Inline */}
+            <div className="flex items-center gap-2 mt-0 md:mt-0">
+               <div className="w-5 flex justify-center">
+                  <Car size={16} className="text-titan-gold" />
+               </div>
+               <span className="text-titan-gold font-bold">Estacionamiento Privado Gratuito</span>
+            </div>
           </div>
+
         </div>
       </div>
     </section>

@@ -6,11 +6,22 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 const navItems: NavItem[] = [
   { label: 'Inicio', href: '#home' },
-  { label: 'Gimnasio', href: '#services' },
+  { label: 'Gimnasio', href: '/gimnasio' },
   { label: 'Planes', href: '#plans' },
   { label: 'Comunidad', href: '#community' },
   { label: 'Contacto', href: '#contact' },
 ];
+
+// --- EASY EDIT CONFIGURATION ---
+const NAV_CONFIG = {
+  // Spacing between logo and top of screen
+  logoPaddingTop: "py-4", 
+  logoPaddingScrolled: "py-2",
+  // Gap between menu items
+  menuGap: "gap-4 lg:gap-8",
+  // Background opacity
+  bgScrolled: "bg-black/95 backdrop-blur-sm"
+};
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,7 +69,7 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled || location.pathname !== '/' ? 'bg-black/95 backdrop-blur-sm border-b border-white/10 py-1' : 'bg-transparent py-2'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled || location.pathname !== '/' ? `${NAV_CONFIG.bgScrolled} border-b border-white/10 ${NAV_CONFIG.logoPaddingScrolled}` : `bg-transparent ${NAV_CONFIG.logoPaddingTop}`}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -75,7 +86,7 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop Nav - Optimized for Tablet (md) to prevent overlap */}
-          <div className="hidden md:flex items-center gap-4 lg:gap-8">
+          <div className={`hidden md:flex items-center ${NAV_CONFIG.menuGap}`}>
             {navItems.map((item) => (
               <a
                 key={item.label}

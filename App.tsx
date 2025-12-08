@@ -4,6 +4,7 @@ import { Navbar } from './components/Navbar';
 import { Landing } from './components/Landing';
 import { PlanDetail } from './components/PlanDetail';
 import { AllPlans } from './components/AllPlans';
+import { GymGallery } from './components/GymGallery';
 import { Footer } from './components/Footer';
 import { WhatsAppWidget } from './components/WhatsAppWidget';
 import { Loader } from './components/Loader';
@@ -43,6 +44,7 @@ function App() {
             <Route path="/" element={<Landing />} />
             <Route path="/planes" element={<AllPlans />} />
             <Route path="/plan/:planId" element={<PlanDetail />} />
+            <Route path="/gimnasio" element={<GymGallery />} />
           </Routes>
         </main>
         <Footer />

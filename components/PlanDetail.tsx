@@ -33,7 +33,7 @@ export const PlanDetail: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black pt-24 pb-12">
+    <div className="min-h-screen bg-black pt-32 md:pt-40 pb-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Breadcrumb / Back */}

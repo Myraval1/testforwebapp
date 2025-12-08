@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
           Rengo, Chile.
         </div>
 
-        <div className="flex space-x-6">
+        <div className="flex space-x-6 md:mr-24">
           <a href="https://www.instagram.com/titans_house_" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-titan-gold transition-colors">
             <Instagram size={24} />
           </a>
