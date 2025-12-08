@@ -6,16 +6,16 @@ import { Button } from './Button';
 // --- EASY EDIT: REPLACE GALLERY LINKS BELOW ---
 // Instructions: Paste your image address (URL) inside the quotes for each slot.
 const GALLERY_URLS = Object.freeze({
-  img1: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070",
-  img2: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1975",
-  img3: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=2070",
-  img4: "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?q=80&w=2069",
-  img5: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1000",
-  img6: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070",
-  img7: "https://images.unsplash.com/photo-1593079831268-3381b0db4a77?q=80&w=2069",
-  img8: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1000",
-  img9: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1000",
-  img10: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=2069"
+  img1: "https://0170a6c2.assets-581.pages.dev/gym1.jpg",
+  img2: "https://0170a6c2.assets-581.pages.dev/gym2.jpg",
+  img3: "https://0170a6c2.assets-581.pages.dev/gym3.jpg",
+  img4: "https://0170a6c2.assets-581.pages.dev/gym4.jpg",
+  img5: "https://0170a6c2.assets-581.pages.dev/gym5.JPG",
+  img6: "https://0170a6c2.assets-581.pages.dev/gym6.jpg",
+  img7: "https://0170a6c2.assets-581.pages.dev/gym7.jpg",
+  img8: "https://0170a6c2.assets-581.pages.dev/gym8.JPG",
+  img9: "https://0170a6c2.assets-581.pages.dev/gym9.JPG",
+  img10: "https://0170a6c2.assets-581.pages.dev/gym10.jpg"
 });
 
 // Map the URLs to the structure used by the page

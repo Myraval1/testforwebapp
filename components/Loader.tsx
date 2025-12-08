@@ -13,7 +13,7 @@ export const Loader: React.FC = () => {
            <div className="absolute inset-0 bg-titan-gold rounded-full blur-2xl opacity-0 animate-[pulseRing_1s_ease-out_forwards]"></div>
            
            <img 
-            src="https://github.com/Myraval1/titanshouseassets/raw/0c6ec7f1989e62f1ff71ba6a9cf6310fd529ba4a/nobglogo.png" 
+            src="https://0170a6c2.assets-581.pages.dev/nobglogo.png" 
             alt="Loading Titans House" 
             className="w-32 md:w-40 relative z-10"
           />

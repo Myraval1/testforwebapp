@@ -14,7 +14,7 @@ const HERO_STYLE_GUIDE = Object.freeze({
 });
 
 // Asset Constants
-const MOBILE_ASSET_URL = "https://github.com/Myraval1/titanshouseassets/raw/187a94feda946d144898f7f504e16412839a8075/mobileherovideogit.mp4";
+const MOBILE_ASSET_URL = "https://0170a6c2.assets-581.pages.dev/mobileherovideogit.mp4";
 const DESKTOP_ASSET_URL = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop";
 
 export const Hero: React.FC = () => {

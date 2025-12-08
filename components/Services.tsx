@@ -5,10 +5,10 @@ import { useNavigate } from 'react-router-dom';
 
 // --- EASY EDIT: REPLACE IMAGE LINKS BELOW ---
 const SERVICE_IMAGES = Object.freeze({
-  musculacion: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=2070&auto=format&fit=crop",
-  recovery: "https://images.unsplash.com/photo-1544367563-12123d896889?q=80&w=2070&auto=format&fit=crop",
-  comunidad: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1975&auto=format&fit=crop",
-  beneficios: "https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=1974&auto=format&fit=crop"
+  musculacion: "https://0170a6c2.assets-581.pages.dev/musculacion.jpg",
+  recovery: "https://0170a6c2.assets-581.pages.dev/recovery.jpg",
+  comunidad: "https://0170a6c2.assets-581.pages.dev/comunidad.jpg",
+  beneficios: "https://0170a6c2.assets-581.pages.dev/beneficios.jpg"
 });
 
 const SERVICES_LAYOUT = Object.freeze({

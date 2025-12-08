@@ -8,7 +8,7 @@ export const Footer: React.FC = React.memo(() => {
         
         <div className="flex items-center mb-6 md:mb-0">
           <img 
-            src="https://github.com/Myraval1/titanshouseassets/raw/0c6ec7f1989e62f1ff71ba6a9cf6310fd529ba4a/nobglogo.png" 
+            src="https://0170a6c2.assets-581.pages.dev/nobglogo.png" 
             alt="Logo Titans House" 
             className="w-20 mr-2 rounded-full" 
             loading="lazy"
