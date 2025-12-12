@@ -86,6 +86,7 @@ export const Navbar: React.FC = () => {
               height="80"
               loading="eager"
               fetchPriority="high"
+              decoding="sync"
             />
             <div className="flex flex-col">
               <span className="text-xl font-heading font-bold text-white tracking-widest leading-none">TITANS</span>
