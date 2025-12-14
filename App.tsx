@@ -38,7 +38,7 @@ const AssetWarmer = () => {
                 <>
                     {/* Mobile Video Only - No Poster */}
                     <video 
-                        src="https://0170a6c2.assets-581.pages.dev/mobileherovideogit.mp4" 
+                        src="https://assets-581.pages.dev/mobileherovideogit.mov" 
                         preload="auto" 
                         muted 
                         playsInline 

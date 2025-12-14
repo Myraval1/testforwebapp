@@ -14,7 +14,7 @@ const HERO_STYLE_GUIDE = Object.freeze({
 });
 
 // Asset Constants
-const MOBILE_ASSET_URL = "https://0170a6c2.assets-581.pages.dev/mobileherovideogit.mp4";
+const MOBILE_ASSET_URL = "https://assets-581.pages.dev/mobileherovideogit.mov";
 const DESKTOP_ASSET_URL = "https://0170a6c2.assets-581.pages.dev/gym1.jpg";
 
 export const Hero: React.FC = () => {
@@ -100,7 +100,7 @@ export const Hero: React.FC = () => {
           preload="auto"
           className="w-full h-full object-cover"
         >
-          <source src={MOBILE_ASSET_URL} type="video/mp4" />
+          <source src={MOBILE_ASSET_URL} />
         </video>
         <div className="absolute inset-0 bg-black/60 bg-gradient-to-t from-black via-black/40 to-black/70"></div>
       </div>
